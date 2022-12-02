@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "webview-javascript-bridge": "^1.0.8"
+  }
+}
