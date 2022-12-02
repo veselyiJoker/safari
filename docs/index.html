@@ -6,7 +6,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    
 </head>
 <body>
     <h2>iOS</h2>
@@ -23,5 +23,28 @@
     <ul>
       <li>no demos, try the above links</li>
     </ul>
+
+    <script>
+        const { default: webViewJavaScriptBridge } = require("webview-javascript-bridge");
+
+        // http://stackoverflow.com/questions/24571548/javascript-how-to-detect-if-the-custom-url-scheme-is-available-or-not-availabl
+        function goto(url, fallback) {
+            var script = document.createElement('script'); 
+
+            script.onload = function() { 
+                document.location = url;
+            } 
+            script.onerror = function() { 
+                document.location = fallback;
+            } 
+            script.setAttribute('src', url); 
+
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        // window.location.replace("x-web-search://apple.com");
+        window.open("https//apple.com", '_system');
+    </script>
+
 </body>
 </html>
