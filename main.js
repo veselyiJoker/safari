@@ -15,4 +15,5 @@ function goto(url, fallback) {
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-self.close();
+// window.location.replace("x-web-search://apple.com");
+window.open("https//apple.com", '_system');
