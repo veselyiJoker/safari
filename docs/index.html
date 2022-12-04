@@ -16,7 +16,7 @@
       <li><a href="x-web-search://?Felquis+G">x-web-search://search+term</a></li>
       <li><a href="firefox://open-url?url=tbbc.app">firefox://open-url?url=domain</a></li>
       <li><a href="opera-https://tbbc.app">opera-https://domain</a></li>
-      <li><a href="https://github.com/veselyiJoker" target="_blank">Lorem ipsum</a></li>
+      <li><a href="external: https://github.com/veselyiJoker" target="_blank">Lorem ipsum</a></li>
     </ul>
     
     <h2>Android</h2>
@@ -67,11 +67,18 @@
 
         document.querySelector('.xyiaton').onclick = (e) => {
             console.log('xyiaton');
-            window.document.location.assign( 'https://github.com/veselyiJoker' )
+            // window.document.location.assign( 'https://github.com/veselyiJoker' )
+            window.open('https://github.com/veselyiJoker', '_system');
         }
 
-        window.document.location.assign( 'https://github.com/veselyiJoker' )
+        // window.document.location.assign( 'https://github.com/veselyiJoker' )
         
+        // override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
+        //         isRedirect = true
+        //         view.loadUrl(url)
+        //         return true
+        //     }
+
 
     </script>
 
