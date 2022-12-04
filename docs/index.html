@@ -16,17 +16,18 @@
       <li><a href="x-web-search://?Felquis+G">x-web-search://search+term</a></li>
       <li><a href="firefox://open-url?url=tbbc.app">firefox://open-url?url=domain</a></li>
       <li><a href="opera-https://tbbc.app">opera-https://domain</a></li>
-      <li><a href="https://github.com/veselyiJoker/safari" target="_blank">Lorem ipsum</a></li>
+      <li><a href="https://github.com/veselyiJoker" target="_blank">Lorem ipsum</a></li>
     </ul>
     
     <h2>Android</h2>
     
     <ul>
       <li>no demos, try the above links</li>
+      <button class="xyiaton">xyiaton</button>
     </ul>
 
     <script>
-        const { default: webViewJavaScriptBridge } = require("webview-javascript-bridge");
+        // const { default: webViewJavaScriptBridge } = require("webview-javascript-bridge");
 
         // http://stackoverflow.com/questions/24571548/javascript-how-to-detect-if-the-custom-url-scheme-is-available-or-not-availabl
         function goto(url, fallback) {
@@ -43,8 +44,35 @@
             document.getElementsByTagName('head')[0].appendChild(script);
         }
 
-        // window.location.replace("x-web-search://apple.com");
-        window.open("https//apple.com", '_system');
+        // // window.location.replace("x-web-search://apple.com");
+        // window.open("https//apple.com", '_system');
+
+        // console.log('пизда');
+        // const isMobileSafari = ( ( ua ) => ua.match(/iPad/) || ua.match(/iPhone/) )( window.navigator.userAgent );
+        // // if( isMobileSafari ) {
+        //     const hyperlinks = document.querySelectorAll( 'a:link' );
+        //     for( let anchor of hyperlinks ) anchor.addEventListener( 'click', onHyperlinkClickPreventAppOpen );
+        // // }
+
+        // function onHyperlinkClickPreventAppOpen( ev ) {
+        //     const el = ev.target;
+        //     // if (
+        //     //     el.href &&
+        //     //     ( el.href.startsWith("http:") || el.href.startsWith( "https:"))
+        //     // ) {
+        //         ev.preventDefault();
+        //         console.log('отработал');
+        //     // }
+        // }
+
+        document.querySelector('.xyiaton').onclick = (e) => {
+            console.log('xyiaton');
+            window.document.location.assign( 'https://github.com/veselyiJoker' )
+        }
+
+        window.document.location.assign( 'https://github.com/veselyiJoker' )
+        
+
     </script>
 
 </body>
